@@ -1,206 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Company N. – Founders Shravan Kumar Dubey & Siddharth Sharma. Luxury, vision, and innovation.">
-    <meta name="google-site-verification" content="WcI0lYbpEAUIJ7MRkfmgOT7KTkmLmFUobMJDCIPp484" />
-    <title>N. | Founders</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Company N. – Founders Shravan Kumar Dubey & Siddharth Sharma. Luxury, vision, and innovation.">
+  <meta name="google-site-verification" content="WcI0lYbpEAUIJ7MRkfmgOT7KTkmLmFUobMJDCIPp484" />
+  <title>N. | Founders</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style>
-        * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-        body {background:#0b0b0b; color:#fff; line-height:1.6; overflow-x:hidden;}
-        a {text-decoration:none; color:inherit;}
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body {background:#0b0b0b; color:#fff; line-height:1.6; overflow-x:hidden;}
+    a {text-decoration:none; color:inherit; transition:0.3s;}
 
-        /* Home Section */
-        #home {
-            background:black;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
-        #home .circle {
-            width:250px;
-            height:250px;
-            border-radius:50%;
-            background:white;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
-        #home .circle span {
-            font-size:6rem;
-            font-weight:bold;
-            color:black;
-        }
+    /* Navbar */
+    nav {
+      position:fixed; top:0; left:0; width:100%;
+      background:#111; padding:15px 30px;
+      display:flex; justify-content:space-between; align-items:center;
+      z-index:1000; border-bottom:1px solid #333;
+    }
+    nav .logo {color:#FFD700; font-size:1.5rem; font-weight:bold;}
+    nav ul {display:flex; list-style:none; gap:20px;}
+    nav ul li a {color:#fff; font-weight:500;}
+    nav ul li a:hover {color:#FFD700;}
 
-        /* Sections */
-        section {padding:100px 0; position:relative;}
-        section h2 {font-size:3rem; color:#FFD700; margin-bottom:40px; text-align:center;}
+    /* Home Section */
+    #home {
+      background:black;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding-top:60px;
+    }
+    #home .circle {
+      width:250px; height:250px;
+      border-radius:50%; background:white;
+      display:flex; justify-content:center; align-items:center;
+      margin-bottom:20px;
+    }
+    #home .circle span {
+      font-size:6rem; font-weight:bold; color:black;
+    }
+    #home p {font-size:1.5rem; color:#ccc;}
 
-        /* Founders */
-        .founders {display:flex; flex-wrap:wrap; justify-content:center; gap:50px;}
-        .founder-card {
-            background:rgba(255,255,255,0.05);
-            border-radius:15px;
-            padding:30px;
-            max-width:400px;
-            text-align:center;
-            border:2px solid #FFD700;
-            transition:0.3s;
-        }
-        .founder-card:hover {transform:scale(1.03); box-shadow:0 0 20px #FFD700;}
-        .founder-card img {
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            margin-bottom:20px;
-            border:3px solid #FFD700;
-        }
-        .founder-card h3 {color:#FFD700; margin-bottom:10px;}
-        .founder-card p {color:#ccc; margin-bottom:10px;}
-        .traits {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:15px;}
-        .trait {
-            background:rgba(255,255,255,0.08);
-            padding:8px 15px;
-            border-radius:12px;
-            color:#FFD700;
-            font-size:0.9rem;
-            font-weight:bold;
-        }
+    /* Sections */
+    section {padding:100px 20px; position:relative;}
+    section h2 {font-size:3rem; color:#FFD700; margin-bottom:40px; text-align:center;}
 
-        /* Contact Form */
-        .contact-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-        .contact-form input, .contact-form textarea {
-            padding:12px; border-radius:8px; border:none;
-            width:100%; background:rgba(255,255,255,0.05); color:#fff;
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline:2px solid #FFD700;
-        }
-        .contact-form button {
-            width:180px; align-self:center;
-            background:#FFD700; color:#0b0b0b;
-            border:none; border-radius:8px;
-            padding:12px 25px; font-weight:bold;
-            transition:0.3s;
-            cursor:pointer;
-        }
-        .contact-form button:hover {transform:scale(1.05); background:#ffcc00;}
+    /* Founders */
+    .founders {display:flex; flex-wrap:wrap; justify-content:center; gap:50px;}
+    .founder-card {
+      background:rgba(255,255,255,0.05);
+      border-radius:15px; padding:30px;
+      max-width:400px; text-align:center;
+      border:2px solid #FFD700; transition:0.3s;
+    }
+    .founder-card:hover {transform:scale(1.03); box-shadow:0 0 20px #FFD700;}
+    .founder-card img {
+      width:180px; height:180px;
+      border-radius:50%; margin-bottom:20px;
+      border:3px solid #FFD700;
+    }
+    .founder-card h3 {color:#FFD700; margin-bottom:10px;}
+    .founder-card p {color:#ccc; margin-bottom:10px;}
+    .traits {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:15px;}
+    .trait {
+      background:rgba(255,255,255,0.08);
+      padding:8px 15px; border-radius:12px;
+      color:#FFD700; font-size:0.9rem; font-weight:bold;
+    }
 
-        .success-message {
-            text-align:center;
-            color:#00ff7f;
-            margin-top:15px;
-            display:none;
-        }
+    /* Contact Form */
+    .contact-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+    .contact-form input, .contact-form textarea {
+      padding:12px; border-radius:8px; border:none;
+      width:100%; background:rgba(255,255,255,0.05); color:#fff;
+    }
+    .contact-form button {
+      width:180px; align-self:center;
+      background:#FFD700; color:#0b0b0b;
+      border:none; border-radius:8px;
+      padding:12px 25px; font-weight:bold;
+      transition:0.3s;
+    }
+    .contact-form button:hover {transform:scale(1.05); background:#ffcc00;}
 
-        footer {text-align:center; padding:20px; background:#111; color:#777;}
-    </style>
+    /* Footer */
+    footer {text-align:center; padding:20px; background:#111; color:#777;}
+    footer .socials {margin-top:10px;}
+    footer .socials a {margin:0 8px; color:#FFD700; font-size:1.2rem;}
+    
+    /* Responsive */
+    @media(max-width:768px){
+      nav ul {display:none;}
+      #home .circle {width:180px; height:180px;}
+      #home .circle span {font-size:4rem;}
+    }
+  </style>
 </head>
 <body>
 
+<!-- Navbar -->
+<nav>
+  <div class="logo">N.</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#founders">Founders</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- Home -->
 <section id="home">
-  <div class="circle">
-    <span>N.</span>
-  </div>
+  <div class="circle"><span>N.</span></div>
+  <p>Discipline. Vision. Impact.</p>
 </section>
 
 <!-- Founders Section -->
 <section id="founders" data-aos="fade-up">
-    <h2>Our Founders</h2>
-    <div class="founders">
+  <h2>Our Founders</h2>
+  <div class="founders">
 
-        <!-- Founder: Shravan -->
-        <div class="founder-card">
-            <img src="images/shravan.jpg" alt="Shravan Kumar Dubey">
-            <h3>Shravan Kumar Dubey</h3>
-            <p>Email: <a href="mailto:dubeyshravan2009@gmail.com" style="color:#FFD700;">dubeyshravan2009@gmail.com</a></p>
-            <p>A visionary student and aspiring entrepreneur with a foundation in commerce and business strategy.</p>
-            <div class="traits">
-                <div class="trait">📊 Business Analytics</div>
-                <div class="trait">💡 Strategic Thinking</div>
-                <div class="trait">🚀 Entrepreneurship</div>
-                <div class="trait">💻 Digital Marketing</div>
-                <div class="trait">📝 Content Creation</div>
-                <div class="trait">🎨 Branding</div>
-            </div>
-        </div>
-
-        <!-- Founder: Siddharth -->
-        <div class="founder-card">
-            <img src="images/siddharth.jpg" alt="Siddharth Sharma">
-            <h3>Siddharth Sharma</h3>
-            <p>A passionate, well-mannered, and simple student, currently completing his JEE + Class 11th journey. Dedicated to supporting the company vision and his co-founder.</p>
-            <div class="traits">
-                <div class="trait">🔥 Passionate</div>
-                <div class="trait">🙏 Well-Mannered</div>
-                <div class="trait">✨ Simple Lifestyle</div>
-                <div class="trait">📚 JEE + 11th Student</div>
-                <div class="trait">🤝 Supportive Co-Founder</div>
-            </div>
-        </div>
-
+    <!-- Shravan -->
+    <div class="founder-card">
+      <img src="images/shravan.jpg" alt="Shravan Kumar Dubey">
+      <h3>Shravan Kumar Dubey</h3>
+      <p>Email: <a href="mailto:dubeyshravan2009@gmail.com" style="color:#FFD700;">dubeyshravan2009@gmail.com</a></p>
+      <p>A visionary student and aspiring entrepreneur with a foundation in commerce and business strategy.</p>
+      <div class="traits">
+        <div class="trait">📊 Business Analytics</div>
+        <div class="trait">💡 Strategic Thinking</div>
+        <div class="trait">🚀 Entrepreneurship</div>
+        <div class="trait">💻 Digital Marketing</div>
+        <div class="trait">📝 Content Creation</div>
+        <div class="trait">🎨 Branding</div>
+      </div>
     </div>
+
+    <!-- Siddharth -->
+    <div class="founder-card">
+      <img src="images/siddharth.jpg" alt="Siddharth Sharma">
+      <h3>Siddharth Sharma</h3>
+      <p>A passionate, well-mannered, and simple student, currently completing his JEE + Class 11th journey. Dedicated to supporting the company vision and his co-founder.</p>
+      <div class="traits">
+        <div class="trait">🔥 Passionate</div>
+        <div class="trait">🙏 Well-Mannered</div>
+        <div class="trait">✨ Simple Lifestyle</div>
+        <div class="trait">📚 JEE + 11th Student</div>
+        <div class="trait">🤝 Supportive Co-Founder</div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- About Company -->
+<!-- About -->
 <section id="about" data-aos="fade-up">
-    <h2>About N.</h2>
-    <p>N. is in its foundation stage. It represents ambition, discipline, and leadership. This website marks the beginning of its journey, and its mission will evolve as the vision grows.</p>
+  <h2>About N.</h2>
+  <p>N. is in its foundation stage. It represents ambition, discipline, and leadership. This website marks the beginning of its journey, and its mission will evolve as the vision grows.</p>
 </section>
 
 <!-- Contact -->
 <section id="contact" data-aos="fade-up">
-    <h2>Let’s Connect</h2>
-    <form class="contact-form" action="https://formspree.io/f/xvgbjqzp" method="POST" id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        <p class="success-message" id="successMessage">✅ Thank you! Your message has been sent.</p>
-    </form>
+  <h2>Let’s Connect</h2>
+  <form class="contact-form" action="https://formspree.io/f/xvgbjqzp" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <!-- Footer -->
 <footer>
-    © 2025 N. All Rights Reserved.
+  © 2025 N. All Rights Reserved.  
+  <div class="socials">
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> |
+    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+  </div>
 </footer>
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({duration:1200, once:true});
-
-  // Success message without leaving the site
-  const form = document.getElementById('contactForm');
-  const successMessage = document.getElementById('successMessage');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      form.reset();
-      successMessage.style.display = 'block';
-    } else {
-      alert('❌ Oops! Something went wrong. Please try again.');
-    }
-  });
 </script>
 
 </body>

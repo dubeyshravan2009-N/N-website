@@ -84,14 +84,25 @@
             padding:12px; border-radius:8px; border:none;
             width:100%; background:rgba(255,255,255,0.05); color:#fff;
         }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline:2px solid #FFD700;
+        }
         .contact-form button {
             width:180px; align-self:center;
             background:#FFD700; color:#0b0b0b;
             border:none; border-radius:8px;
             padding:12px 25px; font-weight:bold;
             transition:0.3s;
+            cursor:pointer;
         }
         .contact-form button:hover {transform:scale(1.05); background:#ffcc00;}
+
+        .success-message {
+            text-align:center;
+            color:#00ff7f;
+            margin-top:15px;
+            display:none;
+        }
 
         footer {text-align:center; padding:20px; background:#111; color:#777;}
     </style>
@@ -152,12 +163,13 @@
 <!-- Contact -->
 <section id="contact" data-aos="fade-up">
     <h2>Let’s Connect</h2>
-    <div class="contact-form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button>Send Message</button>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/xvgbjqzp" method="POST" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="success-message" id="successMessage">✅ Thank you! Your message has been sent.</p>
+    </form>
 </section>
 
 <!-- Footer -->
@@ -169,6 +181,26 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({duration:1200, once:true});
+
+  // Success message without leaving the site
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.reset();
+      successMessage.style.display = 'block';
+    } else {
+      alert('❌ Oops! Something went wrong. Please try again.');
+    }
+  });
 </script>
 
 </body>

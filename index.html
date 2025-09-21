@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Company N. – Founders Shravan Kumar Dubey & Siddharth Sharma. Luxury, vision, and innovation.">
   <meta name="google-site-verification" content="WcI0lYbpEAUIJ7MRkfmgOT7KTkmLmFUobMJDCIPp484" />
-  <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://dubeyshravan2009-n.github.io/N-website/">
-
+  <link rel="canonical" href="https://dubeyshravan2009-n.github.io/N-website/">
   <title>N. | Founders</title>
-<link rel="icon" type="image/png" href="favicon.png">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -41,100 +37,50 @@
     nav ul li a {color:#fff; font-weight:500;}
     nav ul li a:hover {color:#FFD700;}
 
-    /* Home Section */
-    #home {
-      background:black;
-      height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      padding-top:60px;
-    }
-    #home .circle {
-      width:250px; height:250px;
-      border-radius:50%; background:white;
-      display:flex; justify-content:center; align-items:center;
-      margin-bottom:20px;
-    }
-    #home .circle span {
-      font-size:6rem; font-weight:bold; color:black;
-    }
-    #home p {font-size:1.5rem; color:#ccc;}
-
-    #mission {
-  background: rgba(255,255,255,0.02);
-  padding:80px 20px;
-}
-#mission h2 {
-  color:#FFD700;
-  text-align:center;
-  margin-bottom:40px;
-  font-size:3rem;
-}
-#mission p, #mission li {
-  max-width:800px;
-  margin:10px auto;
-  text-align:center;
-  color:#ccc;
-  font-size:1.2rem;
-  line-height:1.8;
-}
-#mission ul {
-  list-style: none;
-  padding:0;
-}
-#mission li::before {
-  content: "✔️ ";
-}
-
     /* Sections */
     section {padding:100px 20px; position:relative;}
     section h2 {font-size:3rem; color:#FFD700; margin-bottom:40px; text-align:center;}
+
+    /* Home Section */
+    #home {
+      background:black; height:100vh;
+      display:flex; flex-direction:column; justify-content:center; align-items:center; padding-top:60px;
+    }
+    #home .circle {width:250px; height:250px; border-radius:50%; background:white; display:flex; justify-content:center; align-items:center; margin-bottom:20px;}
+    #home .circle span {font-size:6rem; font-weight:bold; color:black;}
+    #home p {font-size:1.5rem; color:#ccc;}
 
     /* Founders */
     .founders {display:flex; flex-wrap:wrap; justify-content:center; gap:50px;}
     .founder-card {
       background:rgba(255,255,255,0.05);
-      border-radius:15px; padding:30px;
-      max-width:400px; text-align:center;
+      border-radius:15px; padding:30px; max-width:400px; text-align:center;
       border:2px solid #FFD700; transition:0.3s;
     }
     .founder-card:hover {transform:scale(1.03); box-shadow:0 0 20px #FFD700;}
-    .founder-card img {
-      width:180px; height:180px;
-      border-radius:50%; margin-bottom:20px;
-      border:3px solid #FFD700;
-    }
+    .founder-card img {width:180px; height:180px; border-radius:50%; margin-bottom:20px; border:3px solid #FFD700;}
     .founder-card h3 {color:#FFD700; margin-bottom:10px;}
     .founder-card p {color:#ccc; margin-bottom:10px;}
     .traits {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:15px;}
-    .trait {
-      background:rgba(255,255,255,0.08);
-      padding:8px 15px; border-radius:12px;
-      color:#FFD700; font-size:0.9rem; font-weight:bold;
-    }
+    .trait {background:rgba(255,255,255,0.08); padding:8px 15px; border-radius:12px; color:#FFD700; font-size:0.9rem; font-weight:bold;}
 
-    /* Contact Form */
+    /* Mission */
+    #mission {background: rgba(255,255,255,0.02); padding:80px 20px;}
+    #mission p, #mission li {max-width:800px; margin:10px auto; text-align:center; color:#ccc; font-size:1.2rem; line-height:1.8;}
+    #mission ul {list-style: none; padding:0;}
+    #mission li::before {content: "✔️ ";}
+
+    /* Contact */
     .contact-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-    .contact-form input, .contact-form textarea {
-      padding:12px; border-radius:8px; border:none;
-      width:100%; background:rgba(255,255,255,0.05); color:#fff;
-    }
-    .contact-form button {
-      width:180px; align-self:center;
-      background:#FFD700; color:#0b0b0b;
-      border:none; border-radius:8px;
-      padding:12px 25px; font-weight:bold;
-      transition:0.3s;
-    }
+    .contact-form input, .contact-form textarea {padding:12px; border-radius:8px; border:none; width:100%; background:rgba(255,255,255,0.05); color:#fff;}
+    .contact-form button {width:180px; align-self:center; background:#FFD700; color:#0b0b0b; border:none; border-radius:8px; padding:12px 25px; font-weight:bold; transition:0.3s;}
     .contact-form button:hover {transform:scale(1.05); background:#ffcc00;}
 
     /* Footer */
     footer {text-align:center; padding:20px; background:#111; color:#777;}
     footer .socials {margin-top:10px;}
     footer .socials a {margin:0 8px; color:#FFD700; font-size:1.2rem;}
-    
+
     /* Responsive */
     @media(max-width:768px){
       nav ul {display:none;}
@@ -166,8 +112,6 @@
 <section id="founders" data-aos="fade-up">
   <h2>Our Founders</h2>
   <div class="founders">
-
-    <!-- Shravan -->
     <div class="founder-card">
       <img src="images/shravan.jpg" alt="Shravan Kumar Dubey">
       <h3>Shravan Kumar Dubey</h3>
@@ -183,11 +127,10 @@
       </div>
     </div>
 
-    <!-- Siddharth -->
     <div class="founder-card">
       <img src="images/siddharth.jpg" alt="Siddharth Sharma">
       <h3>Siddharth Sharma</h3>
-      <p>A passionate, well-mannered, and simple student, currently completing his JEE + Class 11th journey. Dedicated to supporting the company vision and his co-founder.</p>
+      <p>A passionate, well-mannered, and simple student, currently completing his JEE + Class 11th journey.</p>
       <div class="traits">
         <div class="trait">🔥 Passionate</div>
         <div class="trait">🙏 Well-Mannered</div>
@@ -196,7 +139,6 @@
         <div class="trait">🤝 Supportive Co-Founder</div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -205,18 +147,17 @@
   <h2>About N.</h2>
   <p>N. is in its foundation stage. It represents ambition, discipline, and leadership. This website marks the beginning of its journey, and its mission will evolve as the vision grows.</p>
 </section>
+
 <!-- Mission Section -->
 <section id="mission" data-aos="fade-up">
   <h2>Our Vision</h2>
-  <p>At N., our true mission is to bring together young, ambitious entrepreneurial minds from across the world and build a thriving entrepreneurial club. This platform is designed for idea exchange, collaboration, and growth, empowering every member to transform innovative concepts into real-world solutions.</p>
-  <p>Through this club, we aim to:</p>
+  <p>At N., our mission is to unite young, ambitious entrepreneurial minds globally and create a thriving club for idea exchange and collaboration.</p>
   <ul>
-    <li><strong>Foster Collaboration:</strong> Create an environment where aspiring entrepreneurs can discuss, debate, and refine their business ideas.</li>
-    <li><strong>Share Knowledge:</strong> Provide resources, insights, and mentorship to help young innovators turn visions into action.</li>
-    <li><strong>Promote Visibility:</strong> Give a platform for innovative ideas to reach a wider audience and make a tangible impact.</li>
-    <li><strong>Cultivate Leadership:</strong> Encourage members to develop leadership, strategic thinking, and problem-solving skills through real-world entrepreneurial challenges.</li>
+    <li><strong>Foster Collaboration:</strong> Discuss, debate, and refine innovative ideas.</li>
+    <li><strong>Share Knowledge:</strong> Provide resources, insights, and mentorship.</li>
+    <li><strong>Promote Visibility:</strong> Amplify ideas to a wider audience.</li>
+    <li><strong>Cultivate Leadership:</strong> Develop leadership and problem-solving skills.</li>
   </ul>
-  <p>Our ultimate goal is to nurture the next generation of leaders and disruptors, creating a community that thrives on creativity, discipline, and actionable innovation.</p>
 </section>
 
 <!-- Contact -->
@@ -232,30 +173,23 @@
 
 <!-- Footer -->
 <footer>
-  © 2025 N. All Rights Reserved.  
+  © 2025 N. All Rights Reserved.
   <div class="socials">
     <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
     <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> |
     <a href="https://www.youtube.com/channel/UCjvxeuszQ9YjK7uaSzetw8w" target="_blank">YouTube</a>
   </div>
-  <footer>
-  © 2025 N-Website | All Rights Reserved
 </footer>
-
-</footer>
-
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:1200, once:true});</script>
+
+<!-- Basic protection: disable right-click & text selection -->
 <script>
-  AOS.init({duration:1200, once:true});
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('selectstart', e => e.preventDefault());
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
